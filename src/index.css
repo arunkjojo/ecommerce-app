@@ -6,8 +6,90 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.site-card-wrapper{
+  background: #727272;
+}
+.cardCol {
+  margin-bottom:5px;
+  margin-top:5px;
+  background: #FFFFFF;
+  border-radius: 16px;
+}
+.cardDetails{
+  background: #FFFFFF;
+  border-radius: 16px;
+}
+.elips {
+  position: absolute;
+  z-index: 1;
+  width: 32px;
+  height: 32px;
+  right: 24px;
+  top: 16px;
+  border-radius: 100%;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+.info {
+  position: absolute;
+  left: 35%;
+  top: 15%;
+  bottom: 0%;
+}
+.itemTitle{
+  font-family: 'DM Serif Display';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 25px;
+  letter-spacing: 0.01em;
+  color: #081F32;
+}
+.itemDescription {
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  position: relative;
+  width: 312px;
+  height: calc(100%);
+
+
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 25px;
+
+  color: #6E798C;
+}
+.calory-celcius-pfc{
+  position: relative;
+  color: #A5ADBB;
+  height: calc(100%);
+}
+
+.prize-button{
+  font-family: 'DM Serif Display';
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25px;
+
+  position: relative;
+}
+.new-prize{
+  width: 88px;
+  font-size: 28px;
+  color: #081F32;
+}
+.old-prize{
+  width: 73px;
+  font-size: 20px;
+  text-decoration-line: line-through;
+  color: #F8593B;
+}
+.order-button{
+  color: #ffffff;
+  background: #2ECC71;
+  border-radius: 4px;
+  width: 100%;
+  border: 0px;
+  cursor: pointer;
 }
