@@ -1,5 +1,4 @@
 import React from "react";
-// import CardDetails from "./components/CardDetails";
 import { Avatar, Card, Row, Col } from "antd";
 const data = [
   {
@@ -15,7 +14,7 @@ const data = [
     oldPrize: 29.9,
 
     red: "/images/red.png",
-    yellow: "/images/wheat.png",
+    yellow: "/images/wheat.png"
   },
   {
     id: "item2",
@@ -31,7 +30,7 @@ const data = [
 
     green: "/images/green.png",
     red: "/images/red.png",
-    yellow: "/images/wheat.png",
+    yellow: "/images/wheat.png"
   },
   {
     id: "item3",
@@ -45,7 +44,7 @@ const data = [
     newPrize: 13.9,
     oldPrize: 18.9,
 
-    yellow: "/images/wheat.png",
+    yellow: "/images/wheat.png"
   },
   {
     id: "item4",
@@ -60,7 +59,7 @@ const data = [
     oldPrize: 29.9,
 
     red: "/images/red.png",
-    yellow: "/images/wheat.png",
+    yellow: "/images/wheat.png"
   },
   {
     id: "item5",
@@ -76,7 +75,7 @@ const data = [
 
     green: "/images/green.png",
     red: "/images/red.png",
-    yellow: "/images/wheat.png",
+    yellow: "/images/wheat.png"
   },
   {
     id: "item6",
@@ -90,7 +89,7 @@ const data = [
     newPrize: 13.9,
     oldPrize: 18.9,
 
-    yellow: "/images/wheat.png",
+    yellow: "/images/wheat.png"
   },
   {
     id: "item7",
@@ -105,7 +104,7 @@ const data = [
     oldPrize: 29.9,
 
     red: "/images/red.png",
-    yellow: "/images/wheat.png",
+    yellow: "/images/wheat.png"
   },
   {
     id: "item8",
@@ -121,7 +120,7 @@ const data = [
 
     green: "/images/green.png",
     red: "/images/red.png",
-    yellow: "/images/wheat.png",
+    yellow: "/images/wheat.png"
   },
   {
     id: "item9",
@@ -135,7 +134,7 @@ const data = [
     newPrize: 13.9,
     oldPrize: 18.9,
 
-    yellow: "/images/wheat.png",
+    yellow: "/images/wheat.png"
   },
   {
     id: "item10",
@@ -150,7 +149,7 @@ const data = [
     oldPrize: 29.9,
 
     red: "/images/red.png",
-    yellow: "/images/wheat.png",
+    yellow: "/images/wheat.png"
   },
   {
     id: "item11",
@@ -166,7 +165,7 @@ const data = [
 
     green: "/images/green.png",
     red: "/images/red.png",
-    yellow: "/images/wheat.png",
+    yellow: "/images/wheat.png"
   },
   {
     id: "item12",
@@ -180,112 +179,120 @@ const data = [
     newPrize: 13.9,
     oldPrize: 18.9,
 
-    yellow: "/images/wheat.png",
-  },
+    yellow: "/images/wheat.png"
+  }
 ];
 const App = () => (
   <div className="site-card-wrapper">
-    <Row style={{marginLeft: '0px',marginRight: '0px'}} gutter={{ xs: 12, sm: 10, md: 8 }}>
+    <Row
+      style={{ marginLeft: "0px", marginRight: "0px" }}
+      gutter={{ xs: 12, sm: 10, md: 8 }}
+    >
       {data.map((data, index) => (
-        <Col className="cardCol" xs={24} sm={12} md={8} key={index}>
+        <Col
+          className="cardCol"
+          style={{ paddingLeft: "0px", paddingRight: "0px" }}
+          xs={20}
+          sm={10}
+          xl={7}
+          key={index}
+        >
           <div className="elips">
-            <img src="/images/i-icon.png" alt="info" className="info" />
+            <img src="/images/i-icon.png" alt="info" className="centerIcon" />
           </div>
           <Card
+            style={{ borderRadius: "16px" }}
             cover={<img alt={data.title} src={data.src} />}
             bordered={false}
             className="cardDetails"
           >
-            {/* <CardDetails item={data} /> */}
-            {/* <Card className="cardDetails" bordered={false}> */}
-              <Row>
-                <Col xs={24} lg={12}>
-                  <h4 className="itemTitle"> {data.title} </h4>
-                </Col>
-                <Col style={{ textAlign: "right" }} xs={24} lg={12}>
-                  <Row xs={24} sm={12}>
-                    {data.green && (
-                      <Col>
-                        <Avatar
-                          size={{ xs: 20, sm: 12 }}
-                          style={{
-                            backgroundColor: "#2ECC71",
-                          }}
-                        >
-                          <img alt="greenLabel" src={data.green} />
-                        </Avatar>
-                      </Col>
-                    )}
-                    {data.red && (
-                      <Col>
-                        <Avatar
-                          size={{ xs: 20, sm: 12 }}
-                          style={{
-                            backgroundColor: "#F8593B",
-                          }}
-                        >
-                          <img alt="redLabel" src={data.red} />
-                        </Avatar>
-                      </Col>
-                    )}
-                    {data.yellow && (
-                      <Col>
-                        <Avatar
-                          size={{ xs: 20, sm: 12 }}
-                          style={{
-                            backgroundColor: "#FFC22B",
-                          }}
-                        >
-                          <img alt="yellowLabel" src={data.yellow} />
-                        </Avatar>
-                      </Col>
-                    )}
-                  </Row>
-                </Col>
-              </Row>
-              <Row>
-                <Col span={24} className="itemDescription">
-                  {data.description}
-                </Col>
-              </Row>
+            <Row>
+              <Col span={12}>
+                <h4 className="itemTitle"> {data.title} </h4>
+              </Col>
+              <Col span={12}>
+                <Row style={{ float: "right" }}>
+                  {data.green && (
+                    <Col>
+                      <Avatar
+                        size={{ xs: 32, sm: 24 }}
+                        style={{
+                          backgroundColor: "#2ECC71"
+                        }}
+                      >
+                        <img alt="greenLabel" src={data.green} />
+                      </Avatar>
+                    </Col>
+                  )}
+                  {data.red && (
+                    <Col>
+                      <Avatar
+                        size={{ xs: 32, sm: 24 }}
+                        style={{
+                          backgroundColor: "#F8593B"
+                        }}
+                      >
+                        <img alt="redLabel" src={data.red} />
+                      </Avatar>
+                    </Col>
+                  )}
+                  {data.yellow && (
+                    <Col>
+                      <Avatar
+                        size={{ xs: 32, sm: 24 }}
+                        style={{
+                          backgroundColor: "#FFC22B"
+                        }}
+                      >
+                        <img alt="yellowLabel" src={data.yellow} />
+                      </Avatar>
+                    </Col>
+                  )}
+                </Row>
+              </Col>
+            </Row>
+            <Row>
+              <Col span={24} className="itemDescription">
+                {data.description}
+              </Col>
+            </Row>
 
-              <Row
-                className="calory-celcius-pfc"
-                gutter={{
-                  xs: 8,
-                  sm: 16,
-                  md: 24,
-                }}
-              >
-                <Col md={24} lg={8} xl={6}>
-                  <div>{data.calory} Cal</div>
-                </Col>
-                <Col md={24} lg={8} xl={12}>
-                  <div>P/F/C: {data.pfc}</div>
-                </Col>
-                <Col md={24} lg={8} xl={6}>
-                  <div>{data.celcius} °C</div>
-                </Col>
-              </Row>
-              <Row
-                className="prize-button"
-                gutter={{
-                  xs: 8,
-                  sm: 16,
-                  md: 24,
-                }}
-              >
-                <Col xs={12} lg={6}>
-                  <div className="new-prize">${data.newPrize}</div>
-                </Col>
-                <Col xs={12} lg={6}>
-                  <div className="old-prize">${data.oldPrize}</div>
-                </Col>
-                <Col xs={24} lg={12}>
-                  <button className="order-button">Order</button>
-                </Col>
-              </Row>
-            {/* </Card> */}
+            <Row
+              className="calory-celcius-pfc"
+              gutter={{
+                xs: 24,
+                sm: 16,
+                md: 8
+              }}
+            >
+              <Col xs={8} md={6} lg={8}>
+                <div>{data.calory} Cal</div>
+              </Col>
+              <Col xs={8} md={12} lg={8}>
+                <div>P/F/C: {data.pfc}</div>
+              </Col>
+              <Col xs={8} md={6} lg={8}>
+                <div>{data.celcius} °C</div>
+              </Col>
+            </Row>
+            <Row
+              className="prize-button"
+              gutter={{
+                xs: 24,
+                sm: 16,
+                md: 8
+              }}
+            >
+              <Col xs={8} sm={12} lg={6}>
+                <div className="new-prize">${data.newPrize}</div>
+              </Col>
+              <Col xs={6} sm={12} lg={6}>
+                <div className="old-prize">${data.oldPrize}</div>
+              </Col>
+              <Col xs={10} sm={24} lg={12}>
+                <button className="order-button">Order</button>
+              </Col>
+            </Row>
           </Card>
         </Col>
       ))}
